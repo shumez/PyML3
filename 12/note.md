@@ -3,7 +3,7 @@ Filename:	note.md
 Project:	/Users/shume/Developer/PyML3/12
 Authors:	shumez <https://github.com/shumez>
 Created:	2019-12-21 11:07:53
-Modified:	2019-12-30 14:18:35
+Modified:	2019-12-30 15:55:41
 -----
 Copyright (c) 2019 shumez
 -->
@@ -154,7 +154,18 @@ generalize
 
 
 ## 12.02. Classifying handwritten digits
+
+Additinal resource on backpropagation
+
+Batch normalization
+
+
 ### 12.02.01 Obtaining and preparing the MNIST dataset
+
+
+
+Loading MNIST using scikit-learn
+
 ### 12.02.02. Implementing a multilayer perceptron
 ## 12.03. Training an artificial neural network
 ### 12.03.01. Computing the  logistic cost function
