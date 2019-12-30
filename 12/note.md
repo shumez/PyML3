@@ -3,7 +3,7 @@ Filename:	note.md
 Project:	/Users/shume/Developer/PyML3/12
 Authors:	shumez <https://github.com/shumez>
 Created:	2019-12-21 11:07:53
-Modified:	2019-12-30 15:55:41
+Modified:	2019-12-30 16:08:23
 -----
 Copyright (c) 2019 shumez
 -->
@@ -12,20 +12,20 @@ Copyright (c) 2019 shumez
 
 ## Contents
 
-- 12.01. Modeling complex functions with artificial neural entworks
-    - 12.01.01. Single-layer neural network recap
-    - 12.01.02. Introducing the multilayer neural network architecture
-    - 12.01.03. Activating a neural network via forward propagation
-- 12.02. Classifying handwritten digits
-    - 12.02.01 Obtaining and preparing the MNIST dataset
-    - 12.02.02. Implementing a multilayer perceptron
-- 12.03. Training an artificial neural network
-    - 12.03.01. Computing the  logistic cost function
-    - 12.03.02. Developing your understanding of backpropagation
-    - 12.03.03. Training neural networks via backpropagation
-- 12.04. About the convergence in neural networks
-- 12.05. A few last words about the neural network implementation
-- 12.06. Summary
+- [12.01. Modeling complex functions with artificial neural entworks][1201]
+    - [12.01.01. Single-layer neural network recap][120101]
+    - [12.01.02. Introducing the multilayer neural network architecture][120102]
+    - [12.01.03. Activating a neural network via forward propagation][120103]
+- [12.02. Classifying handwritten digits][1202]
+    - [12.02.01 Obtaining and preparing the MNIST dataset][120201]
+    - [12.02.02. Implementing a multilayer perceptron][120202]
+- [12.03. Training an artificial neural network][1203]
+    - [12.03.01. Computing the  logistic cost function][120301]
+    - [12.03.02. Developing your understanding of backpropagation][120302]
+    - [12.03.03. Training neural networks via backpropagation][120303]
+- [12.04. About the convergence in neural networks][1204]
+- [12.05. A few last words about the neural network implementation][1205]
+- [12.06. Summary][1206]
 
 
 ## 12.01. Modeling complex functions with artificial neural entworks
@@ -177,8 +177,20 @@ Loading MNIST using scikit-learn
 
 ##
 <!-- toc -->
-[01]: #
-[0101]: #
+[1201]: #1201-Modeling-complex-functions-with-artificial-neural-entworks
+[120101]: #120101-Single-layer-neural-network-recap
+[120102]: #120102-Introducing-the-multilayer-neural-network-architecture
+[120103]: #120103-Activating-a-neural-network-via-forward-propagation
+[1202]: #1202-Classifying-handwritten-digits
+[120201]: #120201-Obtaining-and-preparing-the-MNIST-dataset
+[120202]: #120202-Implementing-a-multilayer-perceptron
+[1203]: #1203-Training-an-artificial-neural-network
+[120301]: #120301-Computing-the--logistic-cost-function
+[120302]: #120302-Developing-your-understanding-of-backpropagation
+[120303]: #120303-Training-neural-networks-via-backpropagation
+[1204]: #1204-About-the-convergence-in-neural-networks
+[1205]: #1205-A-few-last-words-about-the-neural-network-implementation
+[1206]: #1206-Summary
 
 <!-- ref -->
 
