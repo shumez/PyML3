@@ -3,7 +3,7 @@ Filename:	note.md
 Project:	/Users/shume/Developer/PyML3/12
 Authors:	shumez <https://github.com/shumez>
 Created:	2019-12-21 11:07:53
-Modified:	2019-12-30 16:08:23
+Modified:	2019-12-31 12:58:06
 -----
 Copyright (c) 2019 shumez
 -->
@@ -28,7 +28,7 @@ Copyright (c) 2019 shumez
 - [12.06. Summary][1206]
 
 
-## 12.01. Modeling complex functions with artificial neural entworks
+## 12.01. Modeling complex functions with artificial neural networks
 
 [A logical calculus of the ideas immanent in nervous activity, W. S. McCulloch and W. Pitts. The Bulletin of Mathematical Biophysics, 5(4):115–133, 1943.](http://aiplaybook.a16z.com/reference-material/mcculloch-pitts-1943-neural-networks.pdf)
 
@@ -177,8 +177,8 @@ Loading MNIST using scikit-learn
 
 ##
 <!-- toc -->
-[1201]: #1201-Modeling-complex-functions-with-artificial-neural-entworks
-[120101]: #120101-Single-layer-neural-network-recap
+[1201]: #1201-modeling-complex-functions-with-artificial-neural-networks
+[120101]: #120101-single-layer-neural-network-recap
 [120102]: #120102-Introducing-the-multilayer-neural-network-architecture
 [120103]: #120103-Activating-a-neural-network-via-forward-propagation
 [1202]: #1202-Classifying-handwritten-digits
