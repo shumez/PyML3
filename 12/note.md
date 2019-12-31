@@ -3,7 +3,7 @@ Filename:	note.md
 Project:	/Users/shume/Developer/PyML3/12
 Authors:	shumez <https://github.com/shumez>
 Created:	2019-12-21 11:07:53
-Modified:	2019-12-31 13:10:02
+Modified:	2019-12-31 13:24:52
 -----
 Copyright (c) 2019 shumez
 -->
@@ -164,12 +164,13 @@ Batch normalization
 
 Loading MNIST using scikit-learn
 
+
+### 12.02.02. Implementing a multilayer perceptron
+
 - [He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image recognition. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 770-778).](http://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
 - [Smith, L. N. (2017, March). Cyclical learning rates for training neural networks. In 2017 IEEE Winter Conference on Applications of Computer Vision (WACV) (pp. 464-472). IEEE.](https://arxiv.org/pdf/1506.01186.pdf），这种奇技淫巧将获得更高的测试准确率，但是你看这个learning)
 - [Szegedy, C., Vanhoucke, V., Ioffe, S., Shlens, J., & Wojna, Z. (2016). Rethinking the inception architecture for computer vision. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 2818-2826).](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.pdf)
 
-
-### 12.02.02. Implementing a multilayer perceptron
 ## 12.03. Training an artificial neural network
 ### 12.03.01. Computing the  logistic cost function
 ### 12.03.02. Developing your understanding of backpropagation
