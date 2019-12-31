@@ -3,7 +3,7 @@ Filename:	note.md
 Project:	/Users/shume/Developer/PyML3/12
 Authors:	shumez <https://github.com/shumez>
 Created:	2019-12-21 11:07:53
-Modified:	2019-12-31 12:58:06
+Modified:	2019-12-31 13:01:50
 -----
 Copyright (c) 2019 shumez
 -->
@@ -179,18 +179,18 @@ Loading MNIST using scikit-learn
 <!-- toc -->
 [1201]: #1201-modeling-complex-functions-with-artificial-neural-networks
 [120101]: #120101-single-layer-neural-network-recap
-[120102]: #120102-Introducing-the-multilayer-neural-network-architecture
-[120103]: #120103-Activating-a-neural-network-via-forward-propagation
-[1202]: #1202-Classifying-handwritten-digits
-[120201]: #120201-Obtaining-and-preparing-the-MNIST-dataset
-[120202]: #120202-Implementing-a-multilayer-perceptron
-[1203]: #1203-Training-an-artificial-neural-network
-[120301]: #120301-Computing-the--logistic-cost-function
-[120302]: #120302-Developing-your-understanding-of-backpropagation
-[120303]: #120303-Training-neural-networks-via-backpropagation
-[1204]: #1204-About-the-convergence-in-neural-networks
-[1205]: #1205-A-few-last-words-about-the-neural-network-implementation
-[1206]: #1206-Summary
+[120102]: #120102-introducing-the-multilayer-neural-network-architecture
+[120103]: #120103-activating-a-neural-network-via-forward-propagation
+[1202]: #1202-classifying-handwritten-digits
+[120201]: #120201-obtaining-and-preparing-the-MNIST-dataset
+[120202]: #120202-implementing-a-multilayer-perceptron
+[1203]: #1203-training-an-artificial-neural-network
+[120301]: #120301-computing-the--logistic-cost-function
+[120302]: #120302-developing-your-understanding-of-backpropagation
+[120303]: #120303-training-neural-networks-via-backpropagation
+[1204]: #1204-about-the-convergence-in-neural-networks
+[1205]: #1205-a-few-last-words-about-the-neural-network-implementation
+[1206]: #1206-summary
 
 <!-- ref -->
 
