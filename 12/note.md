@@ -3,7 +3,7 @@ Filename:	note.md
 Project:	/Users/shume/Developer/PyML3/12
 Authors:	shumez <https://github.com/shumez>
 Created:	2019-12-21 11:07:53
-Modified:	2019-12-31 14:06:32
+Modified:	2020-01-02 14:59:27
 -----
 Copyright (c) 2019 shumez
 -->
@@ -187,6 +187,25 @@ Loading MNIST using scikit-learn
 \[ L2 = \lambda||w||_2^2 = \lambda\sum_{j=1}^m{w_j^2} \]
 
 \[ J(w) = - \bigg[ \sum_{i=1}^n{y^{[i]} \log(a^{[i]})} + (1 - y^{[i]})\log(1 - a^{[i]}) \bigg] + \frac{\lambda}{2} ||w||_2^2 \]
+
+\[ a^{(out)} = \begin{bmatrix} .1 \\ .9 \\ \vdots \\ .3 \end{bmatrix}, y = \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix} \]
+
+\( t \) activation units
+
+\[ J(\mathbf{W}) = - \sum_{t=1}^n \sum_{j=1}^t { y^{[i]}_j \log{ \Big( a^{[i]}_j \Big) + \Big( 1 - y^{[i]}_j \Big) \log{ \Big( 1 - a^{[i]}_j \Big)} } } \]
+
+- \( [i] \) index of a sample 
+
+\[ J(\mathbf{W}) = - \Big[ \sum_{i=1}^n \sum_{j=1}^t{ y^{[i]}_j \log{(a^{[i]}_j)} + (1 - y^{[i]}_j) \log{(1 - a^{[i]}_j)} } \Big] + \frac{\lambda}{2} \sum_{l=1}^{L-1} \sum_{i=1}^{u_l} \sum_{j=1}^{u_{l+1}} {(w^{(l)}_{j,i})^2} \]
+
+- \( u_l \) # of units in a given layer \( l \)
+
+\[ \frac{\lambda}{2} \sum_{l=1}^{L-1} \sum_{i=1}^{u_l} \sum_{j=1}^{u_{l+1}} {\Big(w_{j,i}^{(l)}\Big)^2} \]
+
+cost fn \( J(\mathbf{W}) \) 
+
+\[ \frac{\partial}{\partial w^{(l)}_{j,i}} J(\mathbf{W}) \]
+
 
 
 
