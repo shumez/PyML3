@@ -3,7 +3,7 @@ Filename:	note.md
 Project:	/Users/shume/Developer/PyML3/15
 Authors:	shumez <https://github.com/shumez>
 Created:	2019-12-17 14:24:36
-Modified:	2019-12-17 14:57:54
+Modified:	2020-01-13 14:42:19
 -----
 Copyright (c) 2019 shumez
 -->
@@ -33,9 +33,30 @@ Copyright (c) 2019 shumez
 - [15.05. Summary][1505]
 
 
+
 ## 15.01. The building blocks of CNNs
 
+Yann LeCun, 1990s
+
+[LeCun, Y., Boser, B., Denker, J. S., Henderson, D., Howard, R. E., Hubbard, W., & Jackel, L. D. (1989). Backpropagation applied to handwritten zip code recognition. Neural computation, 1(4), 541-551.][1989_LeCunYann]
+
 ### 15.01.01. Understanding CNNs and features hierachies
+
+slient (relevant) features
+
+low-level features
+
+feature hierachy
+
+feature map
+
+local receptive field
+
+- sparce connectivity
+- parameter-sharing
+
+
+
 ### 15.01.02. Performing discrete convolutions
 ### 15.01.03. Subsampling layers
 
