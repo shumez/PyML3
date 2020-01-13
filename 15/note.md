@@ -3,7 +3,7 @@ Filename:	note.md
 Project:	/Users/shume/Developer/PyML3/15
 Authors:	shumez <https://github.com/shumez>
 Created:	2019-12-17 14:24:36
-Modified:	2020-01-13 14:42:19
+Modified:	2020-01-13 14:43:56
 -----
 Copyright (c) 2019 shumez
 -->
@@ -32,6 +32,16 @@ Copyright (c) 2019 shumez
     - [15.04.03. Training a CNN gender classifier][150403]
 - [15.05. Summary][1505]
 
+
+## 15.00. Intro
+
+topics:
+
+1. convolution operation
+2. building blocks
+3. deep CNNs in TF
+4. data augmentation techniques
+5. face image-based CNN classifier
 
 
 ## 15.01. The building blocks of CNNs
