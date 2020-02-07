@@ -3,7 +3,7 @@ Filename:	note.md
 Project:	/Users/shume/Developer/PyML3/15
 Authors:	shumez <https://github.com/shumez>
 Created:	2019-12-17 14:24:36
-Modified:	2020-01-13 14:43:56
+Modified:	2020-02-07 16:01:06
 -----
 Copyright (c) 2019 shumez
 -->
@@ -15,6 +15,10 @@ Copyright (c) 2019 shumez
 - [15.01. The building blocks of CNNs][1501]
     - [15.01.01. Understanding CNNs and features hierachies][150101]
     - [15.01.02. Performing discrete convolutions][150102]
+        - [15.01.02.01. Discrete convolutions in one dimension][15010201]
+        - [15.01.02.02. Padding inputs to control the size of the output feature maps][15010202]
+        - [15.01.02.03. Determining the size of the convolution output][15010203]
+        - [15.01.02.04. Performing a discrete convoution in 2D][15010204]
     - [15.01.03. Subsampling layers][150103]
 - [15.02. Putting everything together - implementing a CNN][1502]
     - [15.02.01. Working with multiple input or color channels][150201]
@@ -50,25 +54,104 @@ Yann LeCun, 1990s
 
 [LeCun, Y., Boser, B., Denker, J. S., Henderson, D., Howard, R. E., Hubbard, W., & Jackel, L. D. (1989). Backpropagation applied to handwritten zip code recognition. Neural computation, 1(4), 541-551.][1989_LeCunYann]
 
+---
+The human visual cortex
+
+[Hubel, David H., Wissel, Torsten, 1959][1959_HubelDavidH_WisselTorsten]
+
+---
+
+
 ### 15.01.01. Understanding CNNs and features hierachies
 
-slient (relevant) features
+**slient (relevant) features**
 
-low-level features
+**low-level features**
 
-feature hierachy
+**feature hierachy**
 
 feature map
 
 local receptive field
 
-- sparce connectivity
-- parameter-sharing
-
+- **sparce connectivity**
+- **parameter-sharing**
 
 
 ### 15.01.02. Performing discrete convolutions
+
+**discrete convolution** (**convolution**)
+
+---
+Mathematical notation
+
+\( \mathbf{A_{n_1 \times n_2}} \) is \( n_1 \times n_2 \) dim
+
+\( \mathbf{A[i, j]} \) index \(i\), \(j\) of mat \(\mathbf{A}\)
+
+---
+
+#### 15.01.02.01. Discrete convolutions in one dimension
+
+\( y = x \ast w \) 
+
+\( x \): input, signal
+\( w \): filter, kernel
+
+\[ \mathbf{y} = \mathbf{x} \ast \mathbf{w} \rightarrow y[i] = \sum_{k = -\infty}^{+\infty}{x[i - k] w[k]} \]
+
+**zero-pading**
+
+\[ \mathbf{y} = \mathbf{x} \ast \mathbf{w} \rightarrow y[i] = \sum_{k=0}^{k=m-1}{x^p[i+m-k] w[k]} \]
+
+![][fig1503]
+
+#### 15.01.02.02. Padding inputs to control the size of the output feature maps
+
+- Full padding
+- Valid padding 
+- Same padding
+
+#### 15.01.02.03. Determining the size of the convolution output 
+
+\[ o = \bigg\lfloor \frac{n + 2p - m}{s} \bigg\rfloor +1 \]
+
+\[ n = 10, m = 5, p =2, s = 1 \\ \rightarrow o = \bigg\lfloor \frac{10 + 2 \times 2 - 5}{1} \bigg\rfloor + 1 = 10 \]
+
+\[ n=10, m=3, p=2, s=2 \\ \rightarrow o = \bigg\lfloor \frac{10+2\times2-3}{2} \bigg\rfloor +1 = 6 \]
+
+#### 15.01.02.04. Performing a discrete convoution in 2D
+
+\(X_{n_1 \times n_2}\), filter mat \(W_{m_1 \times m_2}\) (\(m_1≤n_1\), \(m_2≤n_2\))
+\(\mathbf{Y} = \mathbf{X} * \mathbf{W}\)
+
+\[ \mathbf{Y} = \mathbf{X} * \mathbf{W} \\ \rightarrow Y[i,j] = \sum_{k_1=-\infty}^{+\infty} \sum_{k_2=-\infty}^{+\infty}{ X[i-k_1, j-k_2] W[k_1, k_2] } \]
+
+\[ \mathbf{W^r} = \begin{bmatrix} 0.5 & 1.0 & 0.5\\ 0.1 & 0.4 & 0.3\\ 0.4 & 0.7 & 0.5 \end{bmatrix} \]
+
+``` W_rot = W[::-1,::-1] ```
+
 ### 15.01.03. Subsampling layers
+
+\[ \mathbf{X_1} = 
+\begin{bmatrix}
+10 & 255 & 125 & 0 & 170 & 100 \\
+70 & 255 & 105 & 25 & 25 & 70 \\
+255 & 0 & 150 & 0 & 10 & 10 \\
+0 & 255 & 10 & 10 & 150 & 20 \\
+70 & 15 & 200 & 100 & 95 & 0 \\
+35 & 25 & 100 & 20 & 0 & 60
+\end{bmatrix}, \mathbf{X_2} = 
+\begin{bmatrix}
+100 & 100 & 100 & 50 & 100 & 50 \\
+95 & 255 & 100 & 125 & 125 & 170 \\
+80 & 40 & 10 & 10 & 125 & 150 \\
+255 & 30 & 150 & 20 & 120 & 125 \\
+30 & 30 & 150 & 100 & 70 & 70 \\
+70 & 30 & 100 & 200 & 70 & 95
+\end{bmatrix} \xrightarrow{\text{max pooling }P_{2\times2}} \begin{bmatrix} 255 & 125 & 170\\ 255 & 150 & 150\\ 70 & 200 & 95 \end{bmatrix} \]
+
+[Springenberg, J. T., Dosovitskiy, A., Brox, T., & Riedmiller, M. (2014). Striving for simplicity: The all convolutional net. arXiv preprint arXiv:1412.6806.](https://arxiv.org/abs/1412.6806)
 
 ## 15.02. Putting everything together - implementing a CNN
 
@@ -101,12 +184,11 @@ local receptive field
 
 ##
 <!-- toc -->
-[01]: #
-[0101]: #
 
 <!-- ref -->
 
 <!-- fig -->
+[fig1503]: https://raw.githubusercontent.com/rasbt/python-machine-learning-book-3rd-edition/master/ch15/images/15_03.png
 
 <!-- term -->
 
