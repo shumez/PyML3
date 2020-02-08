@@ -3,7 +3,7 @@ Filename:	note.md
 Project:	/Users/shume/Developer/PyML3/15
 Authors:	shumez <https://github.com/shumez>
 Created:	2019-12-17 14:24:36
-Modified:	2020-02-07 16:01:06
+Modified:	2020-02-08 14:00:53
 -----
 Copyright (c) 2019 shumez
 -->
@@ -116,16 +116,16 @@ Mathematical notation
 
 \[ o = \bigg\lfloor \frac{n + 2p - m}{s} \bigg\rfloor +1 \]
 
-\[ n = 10, m = 5, p =2, s = 1 \\ \rightarrow o = \bigg\lfloor \frac{10 + 2 \times 2 - 5}{1} \bigg\rfloor + 1 = 10 \]
+\[ n = 10, m = 5, p =2, s = 1 \newline \rightarrow o = \bigg\lfloor \frac{10 + 2 \times 2 - 5}{1} \bigg\rfloor + 1 = 10 \]
 
-\[ n=10, m=3, p=2, s=2 \\ \rightarrow o = \bigg\lfloor \frac{10+2\times2-3}{2} \bigg\rfloor +1 = 6 \]
+\[ n=10, m=3, p=2, s=2 \newline \rightarrow o = \bigg\lfloor \frac{10+2\times2-3}{2} \bigg\rfloor +1 = 6 \]
 
 #### 15.01.02.04. Performing a discrete convoution in 2D
 
 \(X_{n_1 \times n_2}\), filter mat \(W_{m_1 \times m_2}\) (\(m_1≤n_1\), \(m_2≤n_2\))
 \(\mathbf{Y} = \mathbf{X} * \mathbf{W}\)
 
-\[ \mathbf{Y} = \mathbf{X} * \mathbf{W} \\ \rightarrow Y[i,j] = \sum_{k_1=-\infty}^{+\infty} \sum_{k_2=-\infty}^{+\infty}{ X[i-k_1, j-k_2] W[k_1, k_2] } \]
+\[ \mathbf{Y} = \mathbf{X} * \mathbf{W} \newline \rightarrow Y[i,j] = \sum_{k_1=-\infty}^{+\infty} \sum_{k_2=-\infty}^{+\infty}{ X[i-k_1, j-k_2] W[k_1, k_2] } \]
 
 \[ \mathbf{W^r} = \begin{bmatrix} 0.5 & 1.0 & 0.5\\ 0.1 & 0.4 & 0.3\\ 0.4 & 0.7 & 0.5 \end{bmatrix} \]
 
@@ -149,7 +149,7 @@ Mathematical notation
 255 & 30 & 150 & 20 & 120 & 125 \\
 30 & 30 & 150 & 100 & 70 & 70 \\
 70 & 30 & 100 & 200 & 70 & 95
-\end{bmatrix} \xrightarrow{\text{max pooling }P_{2\times2}} \begin{bmatrix} 255 & 125 & 170\\ 255 & 150 & 150\\ 70 & 200 & 95 \end{bmatrix} \]
+\end{bmatrix} \newline \xrightarrow{\text{max pooling }P_{2\times2}} \begin{bmatrix} 255 & 125 & 170\\ 255 & 150 & 150\\ 70 & 200 & 95 \end{bmatrix} \]
 
 [Springenberg, J. T., Dosovitskiy, A., Brox, T., & Riedmiller, M. (2014). Striving for simplicity: The all convolutional net. arXiv preprint arXiv:1412.6806.](https://arxiv.org/abs/1412.6806)
 
