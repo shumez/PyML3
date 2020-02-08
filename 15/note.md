@@ -3,7 +3,7 @@ Filename:	note.md
 Project:	/Users/shume/Developer/PyML3/15
 Authors:	shumez <https://github.com/shumez>
 Created:	2019-12-17 14:24:36
-Modified:	2020-02-08 14:00:53
+Modified:	2020-02-08 14:55:34
 -----
 Copyright (c) 2019 shumez
 -->
@@ -155,7 +155,27 @@ Mathematical notation
 
 ## 15.02. Putting everything together - implementing a CNN
 
+\[ \mathbf{Z} = \mathbf{W} * \mathbf{X} + \mathbf{b} \]
+
+\( \mathbf{A} = \phi(Z) \)
+
 ### 15.02.01. Working with multiple input or color channels
+
+**channels**  2D array / mat w \( N_1 \times N_2 \)  
+
+\( \mathbf{X}_{N_1 \times N_2 \times C_{in}} \)
+
+---
+
+Reading an image fie
+
+---
+
+\[ \text{Given an example } \mathbf{X}_{n_1 \times n_2 \times c_{in'}} \newline \text{a kernel matrix } \mathbf{W}_{m_1 \times m_2 \times c_{in'}} \newline \text{an bias } b \newline \Downarrow \newline \mathbf{Z}^{Conv} = \sum_{c=1}^{c_{in}}{\mathbf{W}[:,:,c] * \mathbf{X}[:,:,c]} \newline \text{Pre-activation: } \mathbf{Z} = \mathbf{Z}^{Conv} + b_c \newline \text{Feature map: } \mathbf{A} = \phi(\mathbf{Z}) \]
+
+
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book-3rd-edition/master/ch15/images/15_09.png)
+
 ### 15.02.02. Regularizing an NN with dropout
 ### 15.02.03. Loss functions for classification
 
