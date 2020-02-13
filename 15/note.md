@@ -3,7 +3,7 @@ Filename:	note.md
 Project:	/Users/shume/Developer/PyML3/15
 Authors:	shumez <https://github.com/shumez>
 Created:	2019-12-17 14:24:36
-Modified:	2020-02-08 14:55:34
+Modified:	2020-02-12 16:34:04
 -----
 Copyright (c) 2019 shumez
 -->
@@ -171,12 +171,39 @@ Reading an image fie
 
 ---
 
+mat summation 
+
 \[ \text{Given an example } \mathbf{X}_{n_1 \times n_2 \times c_{in'}} \newline \text{a kernel matrix } \mathbf{W}_{m_1 \times m_2 \times c_{in'}} \newline \text{an bias } b \newline \Downarrow \newline \mathbf{Z}^{Conv} = \sum_{c=1}^{c_{in}}{\mathbf{W}[:,:,c] * \mathbf{X}[:,:,c]} \newline \text{Pre-activation: } \mathbf{Z} = \mathbf{Z}^{Conv} + b_c \newline \text{Feature map: } \mathbf{A} = \phi(\mathbf{Z}) \]
+
+\( \underbrace{\text{width} \times \text{height}}_{\text{the kernel size}} \times \underbrace{C_{in}}_{\text{num of input channels}} \times \underbrace{C_{out}}_{\text{num of output feature map}} \)
+
+\[ \text{Given an example } \mathbf{X}_{n_1 \times n_2 \times c_{in'}} \\ \text{a kernel mat } \mathbf{W}_{m_1 \times m_2 \times c_{in} \times c_{out'}} \\ \text{and bias vector } \mathbf{b}_{c_{out}} \\ \Downarrow \\ \mathbf{Z}^{Conv}[:,:,k] = \sum_{c=1} \mathbf{W}[:,:,c,k] * \mathbf{X}[:,:,c] \\ \mathbf{Z}[:,:,k] = \mathbf{Z}^{Conv}[:,:,k] + b[k] \\ \mathbf{A}[:,:,k] = \phi(\mathbf{Z}[:,:,k]) \]
 
 
 ![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book-3rd-edition/master/ch15/images/15_09.png)
 
+---
+How many trainable parameters exist in the preceding example?
+
+
+
+---
+
+[Maturana, D., & Scherer, S. (2015, September). Voxnet: A 3d convolutional neural network for real-time object recognition. In 2015 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (pp. 922-928). IEEE.][2015_MaturanaD]
+
+
 ### 15.02.02. Regularizing an NN with dropout
+
+low capacity : underfitting
+high capacity : overfitting
+
+L2 regularization
+
+Dropout
+prob \( p_{drop} \) (\( p_{keep} = 1-p_{drop} \)) (common \( p_{drpp} = .5 \))
+
+[Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., & Salakhutdinov, R. (2014). Dropout: a simple way to prevent neural networks from overfitting. The journal of machine learning research, 15(1), 1929-1958.][2014_SrivastavaN]
+
 ### 15.02.03. Loss functions for classification
 
 ## 15.03. Implementing a deep CNN using TensorFlow
@@ -206,6 +233,8 @@ Reading an image fie
 <!-- toc -->
 
 <!-- ref -->
+[2015_MaturanaD]: https://s3.amazonaws.com/academia.edu.documents/61200342/_17_voxnet20191112-96103-1del5t4.pdf?response-content-disposition=inline%3B%20filename%3DVoxNet_A_3D_Convolutional_Neural_Network.pdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWOWYYGZ2Y53UL3A%2F20200212%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200212T065140Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=f64260adc9e46d310334c9aa9a2df5e87060f108f36e265c1981bdff22ac3680
+[2014_SrivastavaN]: http://www.jmlr.org/papers/volume15/nandan14a/nandan14a.pdf
 
 <!-- fig -->
 [fig1503]: https://raw.githubusercontent.com/rasbt/python-machine-learning-book-3rd-edition/master/ch15/images/15_03.png
