@@ -3,7 +3,7 @@ Filename:	note.md
 Project:	/Users/shume/Developer/PyML3/15
 Authors:	shumez <https://github.com/shumez>
 Created:	2019-12-17 14:24:36
-Modified:	2020-02-12 16:34:04
+Modified:	2020-02-26 19:42:56
 -----
 Copyright (c) 2019 shumez
 -->
@@ -203,6 +203,11 @@ Dropout
 prob \( p_{drop} \) (\( p_{keep} = 1-p_{drop} \)) (common \( p_{drpp} = .5 \))
 
 [Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., & Salakhutdinov, R. (2014). Dropout: a simple way to prevent neural networks from overfitting. The journal of machine learning research, 15(1), 1929-1958.][2014_SrivastavaN]
+
+\[ p_{\text{Ensemble}} = \Bigg[ \prod_{j=1}^M{p^{(i)}} \Bigg]^{\frac{1}{M}} \]
+
+\( M \) model 
+
 
 ### 15.02.03. Loss functions for classification
 

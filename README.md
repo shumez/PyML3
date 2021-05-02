@@ -2,13 +2,13 @@
 Filename:	README.md
 Project:	/Users/shume/Developer/PyML3
 Authors:	shumez <https://github.com/shumez>
-Created:	2019-12-17 13:12:04
-Modified:	2019-12-17 13:14:40
+Created:	2019-12-16 16:46:00
+Modified:	2019-12-17 13:45:25
 -----
 Copyright (c) 2019 shumez
 -->
 
-# Python MachineLearning 3ed
+# Python Machine Learning 3ed
 
 [![cover](img/)][img]
 
